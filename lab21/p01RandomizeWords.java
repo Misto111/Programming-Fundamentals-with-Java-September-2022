@@ -1,0 +1,26 @@
+package lab21;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class p01RandomizeWords {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String input = scanner.nextLine();
+
+        String[] wordsArr = input.split("\\s+");
+
+        Random rndGenerator = new Random();
+
+        for (int i = 0; i < wordsArr.length; i++) {
+
+            int index = rndGenerator.nextInt(wordsArr.length);
+
+            wordsArr[i] = wordsArr[index];
+
+
+        }
+    }
+}
